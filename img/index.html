@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>精灵图动画</title>
+  <meta charset="utf-8">
+  <style>
+      .sprite {
+        width: 92px;
+        height: 92px;
+        background: url("./jinglingtu.png");
+        transition-property: background-position;
+
+      }
+/*      .sprite:hover{
+        cursor: pointer;
+        animation: run 1s steps(20) infinite;
+      }*/
+
+  </style>
+</head>
+<body>
+<div class="sprite"></div>
+</body>
+<script>
+  var sprite = document.querySelector( '.sprite' );
+  var aa = 0;
+  var time;
+  var times;
+
+
+  window.addEventListener('mouseover',function( e ){
+    let target = e.target;
+
+    if (target.className === 'sprite') {
+      clearInterval(times);
+       time = setInterval( function(){
+          if (aa < 3588) {
+            aa+=92
+            if (aa > 3588) {
+              aa=3588
+            }
+            console.log( aa,"aa" )
+            sprite.style.backgroundPosition = `0px ${-aa}px`;
+          }
+        }, 100 );
+        if (aa > 3588) {
+          clearInterval(time);
+          aa = 3588;
+        }
+      }
+  })
+  window.addEventListener('mouseout',function( e ){
+    let target = e.target;
+
+    if (target.className === 'sprite') {
+      clearInterval(time);
+      times = setInterval( function(){
+          if (aa > 0) {
+            aa-=92
+            console.log( aa,"aa" )
+            sprite.style.backgroundPosition = `0px ${-aa}px`;
+          }
+        }, 100 );
+      if (aa === 0) {
+          clearInterval(times);
+      }
+    }
+  })
+</script>
+</html>

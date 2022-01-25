@@ -1,0 +1,37 @@
+
+---
+Description: StopInstance
+FormatVersion: OOS-2019-06-01
+Outputs:
+    RequestId:
+        Type: List<String>
+        Value: "{{ stopInstance.RequestId }}"
+Parameters:
+    InstanceId:
+        Description: the instance id that you will stop .
+        Type: String
+Tasks:
+  - Name: stopInstance
+    Action: acs::ExecuteApi
+    Description: "stop instance  with specified parameters, refer them here: https://help.aliyun.com/document_detail/63440.html"
+    Properties:
+        Service: Ecs
+        Api: StopInstance
+        Parameters:
+            InstanceId: "{{ InstanceId }}"
+    Outputs:
+        RequestId:
+            Type: List<String>
+            ValueSelector: .RequestId
+  - Name: untilInstanceReady
+    Action: acs::WaitFor
+    Description: "describe instances with specified parameters, refer them here: https://help.aliyun.com/document_detail/63440.html"
+    Properties:
+        Service: Ecs
+        Api: DescribeInstances
+        Parameters:
+            InstanceIds:
+              - "{{ InstanceId }}"
+        DesiredValues:
+          - Stopped
+        PropertySelector: .Instances.Instance[].Status

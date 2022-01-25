@@ -1,0 +1,101 @@
+@font-face {
+  font-family: "iconfont"; /* Project id  */
+  src: url('iconfont.ttf?t=1624524723052') format('truetype');
+}
+
+.iconfont {
+  font-family: "iconfont" !important;
+  font-size: 16px;
+  font-style: normal;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.icon-nail:before { /* 图钉*/
+  content: "\e79e";
+}
+
+.icon-paperplane-fill:before {/* 发送邮件*/
+  content: "\e7a9";
+}
+
+.icon-lightbulb-fill:before { /* 灯泡*/
+  content: "\e7ac";
+}
+
+.icon-tag-fill:before { /* 书签*/
+  content: "\e7ae";
+}
+
+.icon-position-fill:before { /* 位置定点*/
+  content: "\e7af";
+}
+
+.icon-layergroup-fill:before { /* 层组文件*/
+  content: "\e7b5";
+}
+
+.icon-smile-fill:before { /* 笑脸*/
+  content: "\e7b7";
+}
+
+.icon-phone-fill:before { /* 电话*/
+  content: "\e7ca";
+}
+
+.icon-mail-fill:before { /* 邮箱*/
+  content: "\e7d0";
+}
+
+.icon-heart-fill:before { /* 心脏*/
+  content: "\e7d1";
+}
+
+.icon-collection-fill:before { /* 五星*/
+  content: "\e7d2";
+}
+
+.icon-user-fill:before { /* 用户*/
+  content: "\e7d5";
+}
+
+.icon-cog-fill:before { /* 齿轮*/
+  content: "\e7d6";
+}
+
+.icon-clock-fill:before { /* 时间*/
+  content: "\e7d7";
+}
+
+.icon-calendaralt-fill:before { /* 日历*/
+  content: "\e7d8";
+}
+
+.icon-exclamationcircle-f:before { /* 感叹号*/
+  content: "\e7de";
+}
+
+.icon-check-circle-fill:before { /* 打钩*/
+  content: "\e7e2";
+}
+
+.icon-connection:before { /* 链接*/
+  content: "\e851";
+}
+
+.icon-share:before { /* 分享*/
+  content: "\e86f";
+}
+
+.icon-waiting-fill:before { /* 省略号*/
+  content: "\e882";
+}
+
+.icon-HOT-copy:before { /* 热*/
+  content: "\e88a";
+}
+
+.icon-home:before { /* 家*/
+  content: "\e88b";
+}
+

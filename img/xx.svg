@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="87px" height="86px" viewBox="0 0 87 86" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 46.1 (44463) - http://www.bohemiancoding.com/sketch -->
+    <title>Oval</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <ellipse id="Oval" fill="#D8D8D8" cx="43.5" cy="43" rx="43.5" ry="43"></ellipse>
+        <rect id="Rectangle" fill="#FCFCFC" transform="translate(43.073814, 43.040339) rotate(-91.000000) translate(-43.073814, -43.040339) " x="38.5738144" y="12.0403392" width="9" height="62"></rect>
+        <rect id="Rectangle-2" fill="#FFFFFF" x="38" y="15" width="10" height="62"></rect>
+    </g>
+</svg>
