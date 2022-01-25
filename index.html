@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <link rel="shortcut icon" href="http://www.uxhzz.com/img/gougou.png" type="image/x-icon">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script type="text/javascript" src="http://www.uxhzz.com/images/road.js"></script>
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>locozan</title>
+</head>
+<style>
+    html{
+      width: 0px;
+      height: 0px;
+    }
+    a{
+      color: #FFF7F3;
+      cursor: default;
+      display: block;
+      margin-bottom: 20px;
+    }
+    body{
+          overflow: hidden;
+          margin: 0;
+          padding: 0;
+          /*background: #FF516C;*/
+          height: 100%;
+    }
+    button{
+        position: relative;
+        z-index: 11111;
+        outline:none;
+        /* color: #FFF7F3; */
+        font-size: 15px;
+        border-radius: 5px;
+        font-weight: 600;
+        cursor: pointer;
+        border: none;
+        padding: 10px 50px;
+        border: 1px solid rgba(162, 96, 76, 0.5);
+    }
+    @media screen and (max-width: 700px){
+        #div{
+          overflow: hidden;
+        }
+        .headPhotoText{
+          overflow: hidden;
+          margin: 0;
+          padding: 0;
+        }
+    }
+</style>
+<script src="http://uxhzz.com/rainyday/rainyday.min.js"></script>
+<body onload="run();" style="position: absolute;">
+    <div id="root" class="root_pc" style="position: absolute;top: 0px;left: 0px;bottom: 0px;right: 0px;z-index: 1;width: 1008px;height: 255px;margin: auto;"></div>
+    <div class="root_phone" style="position: absolute;top: 35%;left: 0px;bottom: 0px;right: 0px;z-index: 1;margin: auto;text-align: center;">
+        <div className="container" ref="container">
+            <a href="http://uxhzz.com/resume/index.html">
+                <button type="button" className="btn btn-rgba">我的简历</button>
+            </a>
+            <a href="http://uxhzz.com/blog/index.html">
+                <button type="button" className="btn btn-rgba">我的博客</button>
+            </a>
+            <a href="http://uxhzz.com/works/dist/index.html">
+                <button type="button" className="btn btn-rgba">我的作品</button>
+            </a>
+        </div>
+    </div>
+    <canvas></canvas>
+    <img id="background"></img>
+    <footer><p>© 2017 uxhzz.com <a href="http://www.beian.miit.gov.cn/" target="blank">备案号：浙ICP备17005914号</a></p></footer>
+<script type="text/javascript" src="bundle.53aca4cbaa0fe856d654.js"></script></body>
+<script type="text/javascript">var cnzz_protocol = (("https:" == document.location.protocol) ? " https://" : " http://");document.write(unescape("%3Cspan id='cnzz_stat_icon_1260929313'%3E%3C/span%3E%3Cscript src='" + cnzz_protocol + "s95.cnzz.com/z_stat.php%3Fid%3D1260929313' type='text/javascript'%3E%3C/script%3E"));
+    document.querySelector( '#cnzz_stat_icon_1260929313' ).style.display = 'none';
+</script>
+<script>
+    function run() {
+        var screenWidth = document.documentElement.clientWidth;//屏幕宽=可视窗口宽
+        var screenHeight = document.documentElement.clientHeight;//屏幕高=可视窗口高
+        var image = document.getElementById('background');
+
+            image.onload = function() {
+            var engine = new RainyDay({
+                image: this
+            });
+            engine.rain([ [3, 2, 2] ], 50);
+            };
+            
+            image.src = "data:image/jpg;base64,"+ road;
+            console.log("data:image/jpg;base64,"+ road)
+            image.style.width = screenWidth + 'px';
+            image.style.height = screenHeight + 'px';
+    }
+    function browserRedirect() {
+        var sUserAgent = navigator.userAgent.toLowerCase();
+        var bIsIpad = sUserAgent.match(/ipad/i) == "ipad";
+        var bIsIphoneOs = sUserAgent.match(/iphone os/i) == "iphone os";
+        var bIsMidp = sUserAgent.match(/midp/i) == "midp";
+        var bIsUc7 = sUserAgent.match(/rv:1.2.3.4/i) == "rv:1.2.3.4";
+        var bIsUc = sUserAgent.match(/ucweb/i) == "ucweb";
+        var bIsAndroid = sUserAgent.match(/android/i) == "android";
+        var bIsCE = sUserAgent.match(/windows ce/i) == "windows ce";
+        var bIsWM = sUserAgent.match(/windows mobile/i) == "windows mobile";
+        var root_pc = document.querySelector('.root_pc')
+        var root_phone = document.querySelector('.root_phone')
+        if (bIsIpad || bIsIphoneOs || bIsMidp || bIsUc7 || bIsUc || bIsAndroid || bIsCE || bIsWM) {
+            // document.writeln("phone");
+            root_pc.style.display = 'none';
+        } else {
+            // document.writeln("pc");
+            root_phone.style.display = 'none';
+            
+        }
+    }
+    
+    browserRedirect();
+</script>
+</html>
